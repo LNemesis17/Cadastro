@@ -47,7 +47,7 @@
                 var script = document.createElement('script');
 
                 //Sincroniza com o callback.
-                script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
 
                 //Insere script no documento e carrega o conteúdo.
                 document.body.appendChild(script);
@@ -74,8 +74,9 @@ function formatar(mascara, documento){
             documento.value += texto.substring(0,1);
   }
   
-} 
+}
  
+
 function cadastrar(){
 	var msg;
 	var nome = document.getElementById("Nome").value; 
@@ -96,5 +97,3 @@ function cadastrar(){
 	}
 	  
 }
-  
-  
