@@ -76,19 +76,25 @@ function formatar(mascara, documento){
   
 } 
  
-
 function cadastrar(){
-		var msg;
-		var cof =confirm("Confirmar cadastro?");
-		if (cof == true) {
-		  msg = `Parabéns ${nomeDaPessoa}, cadastro realizado !!!`;
+	var msg;
+	var nome = document.getElementById("Nome").value; 
+	var formValido = $("form").get(0).checkValidity();
+ 
+	if(formValido){
+		var r=confirm("Confirmar cadastro?");
+		if (r==true) {
+		msg =`Parabéns ${nome} Cadastro Realizado !!!`;
 		}
 		else{
-		  msg ="Cadastro Não Realizado !!!";
+			msg ="Cadastro Não Realizado !!!";
 		}
-		
 		alert(msg);
-
+	}
+	else{
+		alert("Cadastro Inválido");
+	}
+	  
 }
   
   
