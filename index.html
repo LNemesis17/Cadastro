@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cadastro</title>
-		
+
 		<link href="style.css" type="text/css" rel="stylesheet"/>
-					
+
 		</script><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css'>
 	</head>
 
@@ -18,16 +18,16 @@
 				<div class="panel-body">
 					<div class="form-group">
 
-						<div class="col-md-11 control-label">
+						<div class="col-md-12 control-label">
 							<p class="help-block"><h11>*</h11> Campo Obrigatório </p>
 						</div>
 					</div>
 
 
 					<div class="form-group">
-					  <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label> 
+					  <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>
 
-					  <div class="col-md-8">
+					  <div class="col-md-10">
 						<input id="nome" name="nome" placeholder="" class="form-control input-md" required="" type="text">
 					  </div>
 
@@ -40,25 +40,25 @@
 							<input id="rg" name="rg" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="14" pattern="[0-9]+$">
 						</div>
 
-						<label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>  
+						<label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>
 
 						<div class="col-md-2">
 							<input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
 						</div>
 
-						<label class="col-md-1 control-label" for="Nome">Nascimento<h11>*</h11></label>  
+						<label class="col-md-2 control-label" for="Nome">Nascimento<h11>*</h11></label>
 
 						<div class="col-md-2">
 							<input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)">
 						</div>
-					
-						<label class="col-md-1 control-label" for="radios">Sexo <h11>*</h11></label>
 
-						<div class="col-md-4"> 
+						<label class="col-md-2 control-label" for="radios">Sexo <h11>*</h11></label>
+
+						<div class="col-md-4">
 							<label  class="radio-inline" for="radios-0" >
 
 								<input name="sexo" id="fem" value="Feminino" type="radio">Feminino
-							</label> 
+							</label>
 
 							<label class="radio-inline" for="radios-1">
 								<input name="sexo" id="masc" value="Masculino" type="radio">Masculino
