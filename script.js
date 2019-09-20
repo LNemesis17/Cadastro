@@ -79,13 +79,29 @@ function formatar(mascara, documento){
 
 function cadastrar(){
 	var msg;
-	var nome = document.getElementById("Nome").value; 
+	 
+	var nome = document.getElementById("nome").value;
+	var rg = document.getElementById("rg").value;
+	var cpf = document.getElementById("cpf").value;
+	var nasc = document.getElementById("dtnasc").value;
+	var sex
+	
+	var end = String(document.getElementById("rua").value) + " " + String(document.getElementById("numero").value)+" "+ String(document.getElementById("bairro").value)+" "+ String(document.getElementById("cidade").value)+" "+ String(document.getElementById("estado").value);
+	
+	if(document.getElementById("fem").checked){
+		sex = document.getElementById("fem").value;
+	}
+	else{
+		sex = document.getElementById("masc").value;
+	}
+	
+
 	var formValido = $("form").get(0).checkValidity();
  
 	if(formValido){
-		var r=confirm("Confirmar cadastro?");
-		if (r==true) {
-		msg =`Parabéns ${nome} Cadastro Realizado !!!`;
+		var conf =confirm(`Dados estão corretos? \n#Nome: ${nome} \n#RG: ${rg} \n#CPF: ${cpf} \n#Nascimento: ${nasc} \n#Sexo: ${sex} \n#Endereço: ${end}`);
+		if (conf == true) {
+			msg =`Parabéns ${nome} Cadastro Realizado !!!`;
 		}
 		else{
 			msg ="Cadastro Não Realizado !!!";
